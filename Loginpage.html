@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sea Animation to Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="animation-container" id="animation-container">
+        <img src="logo1.jpg" alt="Animated Sea" class="logo-image">
+        <img src="sea.jpg" alt="Animated Sea" class="sea-image">
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-container" id="login-page" style="display:none;">
+        <div class="form-section">
+            <div class="header">
+                <img src="logo1.jpg" alt="Animated Sea" class="logo-image"  id="logo">
+                <h2 class="welcome-text">Welcome to Login</h2>
+                <span class="new-customer">Are You a New Customer?</span>
+                <div class="enroll-container">
+                    <button class="enroll-btn" onclick="toggleEnrollOptions()">Enroll Now</button>
+                    <div class="enroll-options" id="enroll-options" style="display:none;">
+                        <select class="enroll-option">
+                            <option value="">Select an Option</option>
+                            <option value="loans">Access your loans online</option>
+                            <option value="mortgage">Pay your mortgage online</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <form id="loginForm"  onsubmit="handleSubmit(event)">
+                <div class="input-field">
+                    <label for="username">Online ID</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your ID" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+            <div class="links">
+                <a href="#">Forgot Online ID?</a>
+                <a href="#">Forgot Password?</a>
+            </div>
+        </div>
+        <div class="image-section">
+            <img src="sea.jpg" alt="Sea Image" class="sea-image1">
+        </div>
+    </div>
+    <div id="loading" class="loading" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
